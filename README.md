@@ -1,111 +1,100 @@
-# TOMATO - Food Ordering Website
+# 2YourDoor: The Next-Generation Food Delivery Platform
 
-This repository hosts the source code for TOMATO, a dynamic food ordering website built with the MERN Stack. It offers a user-friendly platform for seamless online food ordering.
+Welcome to the official repository for **2YourDoor**, a cutting-edge, full-stack food ordering application built with the powerful MERN (MongoDB, Express.js, React, Node.js) architecture. Our platform is engineered to deliver an intuitive, secure, and seamless experience for both customers and administrators.
 
-## Demo
+## Core Functionality
 
-- User Panel: [https://food-delivery-frontend-s2l9.onrender.com/](https://food-delivery-frontend-s2l9.onrender.com/)
-- Admin Panel: [https://food-delivery-admin-wrme.onrender.com/](https://food-delivery-admin-wrme.onrender.com/)
+- **Dual-Panel Architecture**: Separate, feature-rich interfaces for both end-users and administrators.
+- **Secure User Authentication**: Robust user security implemented with JSON Web Tokens (JWT) and Bcrypt password hashing.
+- **Integrated Payment Gateway**: Seamless and secure online payments powered by the Stripe API.
+- **Comprehensive User Experience**: Full suite of user actions including registration, login/logout, cart management, and order placement.
+- **Advanced Admin Controls**: Empowering administrators with complete control over product listings, order fulfillment, and user management.
+- **Dynamic Food Filtering**: Users can easily find what they're looking for with our intuitive product filtering system.
+- **Modern API Design**: Built on a foundation of RESTful APIs with role-based access control for enhanced security.
+- **User-Friendly Notifications**: Engaging and informative alerts to keep users updated on their order status.
 
-## Features
+## Getting Started Locally
 
-- User Panel
-- Admin Panel
-- JWT Authentication
-- Password Hashing with Bcrypt
-- Stripe Payment Integration
-- Login/Signup
-- Logout
-- Add to Cart
-- Place Order
-- Order Management
-- Products Management
-- Filter Food Products
-- Login/Signup
-- Authenticated APIs
-- REST APIs
-- Role-Based Identification
-- Beautiful Alerts
+To get a local copy up and running, follow these simple steps.
 
-## Run Locally
+### Prerequisites
 
-Clone the project
+- Node.js and npm installed on your machine.
+- A MongoDB database instance (local or cloud-based).
+- A Stripe account for payment processing.
 
-```bash
-    git clone https://github.com/Mshandev/Food-Delivery
-```
-Go to the project directory
+### Installation & Setup
 
-```bash
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/Mshandev/Food-Delivery.git](https://github.com/Mshandev/Food-Delivery.git)
     cd Food-Delivery
-```
-Install dependencies (frontend)
+    ```
 
-```bash
+2.  **Install Frontend Dependencies:**
+    ```bash
     cd frontend
     npm install
-```
-Install dependencies (admin)
+    ```
 
-```bash
-    cd admin
+3.  **Install Admin Panel Dependencies:**
+    ```bash
+    cd ../admin
     npm install
-```
-Install dependencies (backend)
+    ```
 
-```bash
-    cd backend
+4.  **Install Backend Dependencies:**
+    ```bash
+    cd ../backend
     npm install
-```
-Setup Environment Vaiables
+    ```
 
-```Make .env file in "backend" folder and store environment Variables
-  JWT_SECRET=YOUR_SECRET_TEXT
-  SALT=YOUR_SALT_VALUE
-  MONGO_URL=YOUR_DATABASE_URL
-  STRIPE_SECRET_KEY=YOUR_KEY
- ```
+5.  **Configure Environment Variables:**
+    Create a `.env` file in the `backend` directory and add the following variables:
+    ```
+    JWT_SECRET=YOUR_CUSTOM_JWT_SECRET
+    SALT=YOUR_CUSTOM_SALT_VALUE
+    MONGO_URL=YOUR_MONGODB_CONNECTION_STRING
+    STRIPE_SECRET_KEY=YOUR_STRIPE_API_SECRET_KEY
+    ```
 
-Setup the Frontend and Backend URL
-   - App.jsx in Admin folder
-      const url = YOUR_BACKEND_URL
-     
-  - StoreContext.js in Frontend folder
-      const url = YOUR_BACKEND_URL
+6.  **Link Frontend, Admin, and Backend:**
+    - In `admin/src/App.jsx`, set `const url = 'YOUR_BACKEND_URL';`
+    - In `frontend/src/context/StoreContext.js`, set `const url = 'YOUR_BACKEND_URL';`
+    - In `backend/controllers/orderController.js`, set `const frontend_url = 'YOUR_FRONTEND_URL';`
 
-  - orderController in Backend folder
-      const frontend_url = YOUR_FRONTEND_URL 
+7.  **Launch the Application:**
+    - **Start the Backend:**
+      ```bash
+      cd backend
+      nodemon server.js
+      ```
+    - **Start the Frontend:**
+      ```bash
+      cd ../frontend
+      npm start
+      ```
+    - **Start the Admin Panel:**
+      ```bash
+      cd ../admin
+      npm start
+      ```
 
-Start the Backend server
+## Technology Stack
 
-```bash
-    nodemon server.js
-```
+This project is built using a modern and robust technology stack:
 
-Start the Frontend server
-
-```bash
-    npm start
-```
-
-Start the Backend server
-
-```bash
-    npm start
-```
-## Tech Stack
-* [React](https://reactjs.org/)
-* [Node.js](https://nodejs.org/en)
-* [Express.js](https://expressjs.com/)
-* [Mongodb](https://www.mongodb.com/)
-* [Stripe](https://stripe.com/)
-* [JWT-Authentication](https://jwt.io/introduction)
-* [Multer](https://www.npmjs.com/package/multer)
+-   **Frontend:** [React](https://reactjs.org/)
+-   **Backend:** [Node.js](https://nodejs.org/en), [Express.js](https://expressjs.com/)
+-   **Database:** [MongoDB](https://www.mongodb.com/)
+-   **Payments:** [Stripe](https://stripe.com/)
+-   **Authentication:** [JWT (JSON Web Token)](https://jwt.io/introduction)
+-   **File Uploads:** [Multer](https://www.npmjs.com/package/multer)
 
 ## Deployment
 
-The application is deployed on Render.
+This application is deployed and hosted on [Render](https://render.com/).
 
-## Contributing
+## How to Contribute
 
-Contributions are always welcome! Please feel free to create a PR.
+We welcome and encourage contributions to the project! Please feel free to open a pull request to suggest changes or add new features.
