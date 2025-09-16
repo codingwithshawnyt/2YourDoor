@@ -27,7 +27,7 @@ To get a local copy up and running, follow these simple steps.
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Mshandev/Food-Delivery.git](https://github.com/Mshandev/Food-Delivery.git)
+    git clone [https://github.com/codingwithshawnyt/2YourDoor.git](https://github.com/codingwithshawnyt/2YourDoor.git)
     cd Food-Delivery
     ```
 
